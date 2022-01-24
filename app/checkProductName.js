@@ -82,10 +82,8 @@ const JANSSEN_PRODUCT_NOT_COVERED_BY_SEERVICE=`Il prodotto indicato non è al
         if(productfind && productfind.data && productfind.data.status){
             if(productfind.data.status === 'NOT_JANSSEN_PRODUCT'){
                 return NON_JANSSEN_PRODUCT
-            }else if(productfind.data.status === 'JANSSEN_PRODUCT_COVERED_BY_SEERVICE'){
-                return JANSSEN_PRODUCT_COVERED_BY_SEERVICE;
-            }else if(productfind.data.status === 'JANSSEN_PRODUCT_NOT_COVERED_BY_SEERVICE'){
-                return JANSSEN_PRODUCT_NOT_COVERED_BY_SEERVICE;
+            }else{
+                return productfind.data.status;
             }
             
         }else{
